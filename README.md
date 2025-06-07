@@ -18,7 +18,7 @@ No MATLAB toolboxes or GNU Octave packages are required.
 
 The WOLA and PFB filterbank functions have no external dependencies and run right out of the box given user supplied input data and filter coefficients.
 
-The demonstration scripts use the author's WSINC package (available on MATLAB File Exchange and github) to design the prototype filter. To run the demonstrations, download and add to your MATLAB / GNU Octave path.
+The demonstration scripts use the author's [WSINC](https://www.mathworks.com/matlabcentral/fileexchange/181174-wsinc) package (available on MATLAB File Exchange and github) to design the prototype filter. To run the demonstrations, download and add to your MATLAB / GNU Octave path.
 
 The MEX file requires FFTW version 3 and a C++ compiler supporting C++17 or newer.
 
