@@ -41,8 +41,8 @@ Window             Ntaps          Fc       Fstop         Fs    Adb       F.1db  
 hamming              989    6.25e-02    6.88e-02   1.00e+00     60    0.00e+00    0.00e+00    0.00e+00     -80
 Elapsed time is 0.393678 seconds.
 >> 
-![Results plot 1](./images/example_1a.png "WOLA 8 channel max D")
 ```
+![Results plot 1](./images/example_1a.png "WOLA 8 channel max D")
 
 Repeat with the PFB implementation.
 ```
@@ -60,8 +60,8 @@ Window             Ntaps          Fc       Fstop         Fs    Adb       F.1db  
 hamming              989    6.25e-02    6.88e-02   1.00e+00     60    0.00e+00    0.00e+00    0.00e+00     -80
 Elapsed time is 0.519995 seconds.
 >>
-![Results plot 2](./images/example_1b.png "PFB 8 channel max D")
 ```
+![Results plot 2](./images/example_1b.png "PFB 8 channel max D")
 
 ### Example 2: Demonstrate a 128 channel, non-maximally decimated channelizer
 There's a lot going on here compared to the last example. Besides a much larger channel count, the decimation D=40 is now less than the number of channels M=128. Thus the sample rate at the output is 128000/40=3200 Hz or 3.2x higher than a maximally decimated channelizer. Also the channel bandwidth is now wider than the channel spacing (channel spacing: fsin/M = 128000/128 = 1 kHz and channel bw = 128000/96 = 1333 Hz). Note that the figure is zoomed into the inner 40 channels.
@@ -80,8 +80,8 @@ Window             Ntaps       Fc    Fstop        Fs    Adb    F.1db     F1db   
 hamming              813      667      900    128000     40      438      528      603     -74
 Elapsed time is 0.253603 seconds.
 >>
-![Results plot 3](./images/example_2.png "WOLA 128 channel nonmax D zoom plot")
 ```
+![Results plot 3](./images/example_2.png "WOLA 128 channel nonmax D zoom plot")
 
 Repeat with the PFB implementation.
 ```
