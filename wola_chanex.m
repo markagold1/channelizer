@@ -1,10 +1,16 @@
 function y = wola_chanex(indata, M, D, cofs)
 % Usage: y = wola_chanex(indata, M, D, cofs)
 %
-% Demonstrate weighted overlap-add channelizer.
+% Weighted overlap-add channelizer
+%
+%   indata..............N-by-1 array of complex samples
+%   M...................Scalar integer representing number of channels (M>1)
+%   D...................Scalar integer representing decimation factor  (D<=M)
+%   cofs................L-by-1 array of real lowpass filter coefficients
 %
 
     % Initialize
+    indata = shiftdim(indata);         % ensure input is a column vector
     get_shift(M,D,'reset');            % reset phase correction state machine
     Nout = numel(2:D:numel(indata));   % number of output samples to generate
     Nshift = numel(cofs);              % number of shift register stages

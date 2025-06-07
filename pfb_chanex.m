@@ -1,12 +1,19 @@
 function y = pfb_chanex(indata, M, D, cofs)
 % Usage: y = pfb_chanex(indata, M, D, cofs)
 %
-% Old:   y = chanex(datafile, pfbfile)
+% Polyphase filter bank channelizer
 %
-% Demonstrate polyphase filter bank channelizer for M=256, D=25.
+%   indata..............N-by-1 array of complex samples
+%   M...................Scalar integer representing number of channels (M>1)
+%   D...................Scalar integer representing decimation factor  (D<=M)
+%   cofs................M-by-L array of real filter coefficients representing
+%                       a polyphase decomposition of the lowpass prototype
+%                       filter, where M is the number of channels and L is
+%                       the number of taps per channel
 %
 
     % Initialize
+    indata = shiftdim(indata);         % ensure input is a column vector
     get_shift(M,D,'reset');            % reset phase correction state machine
     Nout = numel(2:D:numel(indata));   % number of output samples to generate
     Nshift = numel(cofs);              % number of shift register stages

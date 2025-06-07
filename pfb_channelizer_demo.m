@@ -17,7 +17,7 @@ function [y,cofs,res] = pfb_channelizer_demo(M,D,fs,cbw,tbw,win,attendb)
 %   y...........N-by-M array of channelized samples, where
 %               N is the number of samples at fsout=fs/D
 %               M is the number of channels
-%   cofs........1d array of wola filter coefficients
+%   cofs........1d array of lowpass prototype filter coefficients
 %   res.........cell array of filter design info (see wsinc package)
 %
 
