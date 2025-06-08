@@ -1,6 +1,6 @@
 # Explore Efficient Filterbank Channelizer Architectures
 
-This repo contains full implementations of a Weighted Overlap-Add (WOLA) and a Polyphase (PFB) analysis filterbank. Also included are demonstration "wrapper" scripts that make it easy to explore different channelizer designs using these architectures. Finally, a C++ MEX WOLA implementation is included, which is capable of running many times faster than the m-file equivalent.
+This repo contains full implementations of Weighted Overlap-Add (WOLA) and Polyphase (PFB) analysis filterbanks. Also included are demonstration "wrapper" scripts that make it easy to explore different channelizer designs using these architectures. Finally, a C++ MEX WOLA implementation is included, which is capable of running many times faster than the m-file equivalent.
 
 The WOLA and PFB functions support both maximally and non-maximally decimated configurations, and allow control of filter bandwidth independent of channel spacing.
 
@@ -10,13 +10,13 @@ The WOLA and PFB functions support both maximally and non-maximally decimated co
 * pfb_chanex.m - Polypnase analysis filterbank
 * pfb_channelizer_demo.m - Demonstration of PFB channelizer
 
-The m-file functions have been tested and are compatible with MATLAB and GNU Octave. The MEX file has been built and tested on a RHEL 8 linux system.
+The m-file functions have been tested with MATLAB and GNU Octave. The MEX file has been built and tested on a RHEL 8 linux system.
 
 # External dependencies
 
 No MATLAB toolboxes or GNU Octave packages are required.
 
-The WOLA and PFB filterbank functions have no external dependencies and run right out of the box given user supplied input data and filter coefficients.
+The WOLA and PFB filterbank functions have no external dependencies and should run straight out of the box given user supplied input data and filter coefficients.
 
 The demonstration scripts use the author's [WSINC](https://www.mathworks.com/matlabcentral/fileexchange/181174-wsinc) package (available on MATLAB File Exchange and github) to design the prototype filter. To run the demonstrations, download WSINC and add it to your MATLAB / GNU Octave path.
 
